@@ -277,6 +277,7 @@ import NWWebSocket
         if self.connectionState == .connected {
             return
         } else {
+            connectionEstablishedMessageReceived = false
             updateConnectionState(to: .connecting)
             self.socket.connect()
         }
